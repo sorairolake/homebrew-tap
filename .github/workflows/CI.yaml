@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: None
+#
+# SPDX-License-Identifier: CC0-1.0
+
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "master"
+  schedule:
+    - cron: "0 0 * * 0"
+
+jobs:
+  test:
+    name: Test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-22.04
+          - macos-14
+    steps:
+      - name: Setup Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+      - name: Cache Homebrew Bundler RubyGems
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ runner.os }}-rubygems-
+      - name: Install Homebrew Bundler RubyGems
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: brew install-bundler-gems
+      - name: Run the pre-cleanup step
+        run: brew test-bot --only-cleanup-before
+      - name: Run the local system setup check step
+        run: brew test-bot --only-setup
+      - name: Run the tap syntax check step
+        run: brew test-bot --only-tap-syntax
+      - name: Run the formulae steps
+        if: github.event_name == 'pull_request'
+        run: brew test-bot --only-formulae
