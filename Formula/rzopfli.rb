@@ -5,8 +5,8 @@
 class Rzopfli < Formula
   desc "Lossless data compression tool using Zopfli"
   homepage "https://sorairolake.github.io/rzopfli/"
-  url "https://github.com/sorairolake/rzopfli/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "46435ff368f81f97a2a75bf3851e4c6a0b1faa6af308c79ae203397133723a5f"
+  url "https://github.com/sorairolake/rzopfli/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "b6d3bdae8fba5975515d1df4b0bc7e65aa68b243866dcbf695e0463448abd8aa"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sorairolake/rzopfli.git", branch: "develop"
 
