@@ -5,8 +5,8 @@
 class ScryptencCli < Formula
   desc "Utility for encrypt and decrypt files"
   homepage "https://sorairolake.github.io/scryptenc-rs/"
-  url "https://github.com/sorairolake/scryptenc-rs/archive/refs/tags/scryptenc-cli-v0.7.12.tar.gz"
-  sha256 "e8e774a5a3fd2dcf5cceae70351bd50f18dd5b28bc97ce76be5a8fce5caa93c2"
+  url "https://github.com/sorairolake/scryptenc-rs/archive/refs/tags/scryptenc-cli-v0.7.13.tar.gz"
+  sha256 "092fe99b9b0e604cb2f727cebc84bb259a0a00a9eafa818f040dda005bdb64a9"
   license "GPL-3.0-or-later"
   head "https://github.com/sorairolake/scryptenc-rs.git", branch: "develop"
 
