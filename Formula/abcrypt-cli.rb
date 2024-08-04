@@ -5,8 +5,8 @@
 class AbcryptCli < Formula
   desc "Utility for encrypt and decrypt files"
   homepage "https://sorairolake.github.io/abcrypt/"
-  url "https://github.com/sorairolake/abcrypt/archive/refs/tags/abcrypt-cli-v0.3.2.tar.gz"
-  sha256 "b0061bdb2e22848d491ed8b245328e1ea558252932235d2774715edad5ecbf4a"
+  url "https://github.com/sorairolake/abcrypt/archive/refs/tags/abcrypt-cli-v0.3.3.tar.gz"
+  sha256 "201b5c5dc7211faf06b08ed800f0d69d15992c835dd21387ea2e822b7a2a4003"
   license "GPL-3.0-or-later"
   head "https://github.com/sorairolake/abcrypt.git", branch: "develop"
 
