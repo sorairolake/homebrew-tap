@@ -5,8 +5,8 @@
 class Favico < Formula
   desc "Utility for creating favicons"
   homepage "https://sorairolake.github.io/favico/"
-  url "https://github.com/sorairolake/favico/archive/refs/tags/v0.1.6.tar.gz"
-  sha256 "783e6c09b0eb042f1dcaaef3cd9fc77f4004b68c92e6e847e29b742a87a0a5f4"
+  url "https://github.com/sorairolake/favico/archive/refs/tags/v0.1.7.tar.gz"
+  sha256 "fd01134a23808cf0ddcbd27673bf3a17171b313ba5b005af41f469518bbc9e2f"
   license "GPL-3.0-or-later"
   head "https://github.com/sorairolake/favico.git", branch: "develop"
 
