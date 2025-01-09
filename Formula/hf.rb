@@ -3,10 +3,10 @@
 # SPDX-License-Identifier: CC0-1.0
 
 class Hf < Formula
-  desc "Utility for hidden file/directory"
+  desc "Utility for hidden files and directories"
   homepage "https://sorairolake.github.io/hf/"
-  url "https://github.com/sorairolake/hf/archive/refs/tags/v0.3.6.tar.gz"
-  sha256 "0da63f6e255493116f22ba883ce4df37796d2a696f7548eed2239e42fe3e0f63"
+  url "https://github.com/sorairolake/hf/archive/refs/tags/v0.3.7.tar.gz"
+  sha256 "932966b1aba8dd05ae7edfc6c77be946ccdc0510447778402484d06a55c6b990"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sorairolake/hf.git", branch: "develop"
 
