@@ -5,8 +5,8 @@
 class Hf < Formula
   desc "Utility for hidden files and directories"
   homepage "https://sorairolake.github.io/hf/"
-  url "https://github.com/sorairolake/hf/archive/refs/tags/v0.3.8.tar.gz"
-  sha256 "74f3b0bdd0811e9593fbe474ea74d77759f73acfd5212589b69885af29da7edb"
+  url "https://github.com/sorairolake/hf/archive/refs/tags/v0.3.9.tar.gz"
+  sha256 "ca28e904638a35d7d81471c884b9b430de04c778b6e0815f1dc4457698f922ec"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sorairolake/hf.git", branch: "develop"
 
