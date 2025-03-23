@@ -5,8 +5,8 @@
 class Glzip < Formula
   desc "Utility for reading and writing of lzip format compressed files"
   homepage "https://github.com/sorairolake/lzip-go"
-  url "https://github.com/sorairolake/lzip-go/archive/refs/tags/v0.3.5.tar.gz"
-  sha256 "5459a928edfb53f6e77594550dca8065fd36ab9daf189e87e1c2a0d2da714ada"
+  url "https://github.com/sorairolake/lzip-go/archive/refs/tags/v0.3.7.tar.gz"
+  sha256 "bca7f4029873116688ced1bf9a196d7475b4e52bd8a95b6409f6e0f8b54467d0"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sorairolake/lzip-go.git", branch: "develop"
 
