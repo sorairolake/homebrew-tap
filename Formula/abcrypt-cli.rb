@@ -5,8 +5,8 @@
 class AbcryptCli < Formula
   desc "Utility for encrypt and decrypt files"
   homepage "https://sorairolake.github.io/abcrypt/"
-  url "https://github.com/sorairolake/abcrypt/archive/refs/tags/abcrypt-cli-v0.4.0.tar.gz"
-  sha256 "53843da031883ec93b249ad3a4f66ef41e1e1aaeaa57c4438310a6363db1c362"
+  url "https://github.com/sorairolake/abcrypt/archive/refs/tags/abcrypt-cli-v0.5.0.tar.gz"
+  sha256 "b9f5d60a23f5b31048a5c84907af3096e3555d59db7012d5fb80c51f1ec8ecf6"
   license "GPL-3.0-or-later"
   head "https://github.com/sorairolake/abcrypt.git", branch: "develop"
 
@@ -23,9 +23,9 @@ class AbcryptCli < Formula
     man1.install Dir["#{out_dir}/*.1"]
     man5.install Dir["#{out_dir}/*.5"]
 
-    system "#{bin}/abcrypt --generate-completion bash > abcrypt.bash"
-    system "#{bin}/abcrypt --generate-completion fish > abcrypt.fish"
-    system "#{bin}/abcrypt --generate-completion zsh > _abcrypt"
+    system "#{bin}/abcrypt completion bash > abcrypt.bash"
+    system "#{bin}/abcrypt completion fish > abcrypt.fish"
+    system "#{bin}/abcrypt completion zsh > _abcrypt"
     bash_completion.install "abcrypt.bash"
     fish_completion.install "abcrypt.fish"
     zsh_completion.install "_abcrypt"
