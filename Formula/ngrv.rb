@@ -5,8 +5,8 @@
 class Ngrv < Formula
   desc "Terminal-based pipe viewer similar to `pv(1)`"
   homepage "https://github.com/sorairolake/ngrv"
-  url "https://github.com/sorairolake/ngrv/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "cba22c1fc9322a66decc6a7a31fe74c492a4e559306b72941591805c21fb7e11"
+  url "https://github.com/sorairolake/ngrv/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "652a1d1210c56307d6f2263c9b4c0068ad3138436b115455a9feddeb0eb8bbc8"
   license "GPL-3.0-or-later"
   head "https://github.com/sorairolake/ngrv.git", branch: "develop"
 
