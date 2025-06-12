@@ -5,8 +5,8 @@
 class ScryptencCli < Formula
   desc "Utility for encrypt and decrypt files"
   homepage "https://sorairolake.github.io/scryptenc-rs/"
-  url "https://github.com/sorairolake/scryptenc-rs/archive/refs/tags/scryptenc-cli-v0.7.14.tar.gz"
-  sha256 "45947e6a17ad3c554d92663fc6a131200c5b136f0e1af4f8242c9363458b5fd4"
+  url "https://github.com/sorairolake/scryptenc-rs/archive/refs/tags/scryptenc-cli-v0.8.0.tar.gz"
+  sha256 "636e9870985894beff16c5a03cf3b5cfa51fa430a03a8999b952099f13c310c1"
   license "GPL-3.0-or-later"
   head "https://github.com/sorairolake/scryptenc-rs.git", branch: "develop"
 
@@ -22,9 +22,9 @@ class ScryptencCli < Formula
     out_dir = Dir["target/release/build/scryptenc-cli-*/out"].first
     man1.install Dir["#{out_dir}/*.1"]
 
-    system "#{bin}/rscrypt --generate-completion bash > rscrypt.bash"
-    system "#{bin}/rscrypt --generate-completion fish > rscrypt.fish"
-    system "#{bin}/rscrypt --generate-completion zsh > _rscrypt"
+    system "#{bin}/rscrypt completion bash > rscrypt.bash"
+    system "#{bin}/rscrypt completion fish > rscrypt.fish"
+    system "#{bin}/rscrypt completion zsh > _rscrypt"
     bash_completion.install "rscrypt.bash"
     fish_completion.install "rscrypt.fish"
     zsh_completion.install "_rscrypt"
