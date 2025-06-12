@@ -5,8 +5,8 @@
 class Hf < Formula
   desc "Utility for hidden files and directories"
   homepage "https://sorairolake.github.io/hf/"
-  url "https://github.com/sorairolake/hf/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "6b1854276d76afa84a8b623dd4ab7f0b7e6b0a1db5ffa9803606f4df870d2979"
+  url "https://github.com/sorairolake/hf/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "30b4475571c3191f8b7cc229da5d21490ae5fee4d67455818d8f7eee779d1a1a"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sorairolake/hf.git", branch: "develop"
 
@@ -19,9 +19,9 @@ class Hf < Formula
     out_dir = Dir["target/release/build/hf-*/out"].first
     man1.install Dir["#{out_dir}/*.1"]
 
-    system "#{bin}/hf --generate-completion bash > hf.bash"
-    system "#{bin}/hf --generate-completion fish > hf.fish"
-    system "#{bin}/hf --generate-completion zsh > _hf"
+    system "#{bin}/hf completion bash > hf.bash"
+    system "#{bin}/hf completion fish > hf.fish"
+    system "#{bin}/hf completion zsh > _hf"
     bash_completion.install "hf.bash"
     fish_completion.install "hf.fish"
     zsh_completion.install "_hf"
