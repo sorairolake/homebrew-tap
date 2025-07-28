@@ -5,8 +5,8 @@
 class AbcryptCli < Formula
   desc "Utility for encrypt and decrypt files"
   homepage "https://sorairolake.github.io/abcrypt/"
-  url "https://github.com/sorairolake/abcrypt/archive/refs/tags/abcrypt-cli-v0.5.0.tar.gz"
-  sha256 "b9f5d60a23f5b31048a5c84907af3096e3555d59db7012d5fb80c51f1ec8ecf6"
+  url "https://github.com/sorairolake/abcrypt/archive/refs/tags/abcrypt-cli-v0.5.1.tar.gz"
+  sha256 "6886fa4aa9bfdf9453755a3baf45f94252c2e16fd2ba23863b1276de4c498795"
   license "GPL-3.0-or-later"
   head "https://github.com/sorairolake/abcrypt.git", branch: "develop"
 
@@ -19,9 +19,9 @@ class AbcryptCli < Formula
 
     system "cargo", "install", *std_cargo_args(path: "crates/cli")
 
-    out_dir = Dir["target/release/build/abcrypt-cli-*/out"].first
-    man1.install Dir["#{out_dir}/*.1"]
-    man5.install Dir["#{out_dir}/*.5"]
+    system "asciidoctor", "-b", "manpage", "docs/man/man{1/*.1,5/abcrypt.5}.adoc"
+    man1.install Dir["docs/man/man1/*.1"]
+    man5.install "docs/man/man5/abcrypt.5"
 
     system "#{bin}/abcrypt completion bash > abcrypt.bash"
     system "#{bin}/abcrypt completion fish > abcrypt.fish"
