@@ -5,8 +5,8 @@
 class Favico < Formula
   desc "Utility for creating favicons"
   homepage "https://sorairolake.github.io/favico/"
-  url "https://github.com/sorairolake/favico/archive/refs/tags/v0.1.11.tar.gz"
-  sha256 "232e9fa642f3d3183c24c45a717e04ab286a06c874de929080b11035d93a6ac8"
+  url "https://github.com/sorairolake/favico/archive/refs/tags/v0.1.12.tar.gz"
+  sha256 "20b85ee028ef91a05da04b1b72dae4ad49d5063406221487b7f1a3fdbb017554"
   license "GPL-3.0-or-later"
   head "https://github.com/sorairolake/favico.git", branch: "develop"
 
@@ -16,8 +16,8 @@ class Favico < Formula
   def install
     system "cargo", "install", *std_cargo_args
 
-    out_dir = Dir["target/release/build/favico-*/out"].first
-    man1.install Dir["#{out_dir}/*.1"]
+    system "asciidoctor", "-b", "manpage", "docs/man/man1/favico.1.adoc"
+    man1.install "docs/man/man1/favico.1"
 
     system "#{bin}/favico --generate-completion bash > favico.bash"
     system "#{bin}/favico --generate-completion fish > favico.fish"
