@@ -5,8 +5,8 @@
 class Randgen < Formula
   desc "Generate pseudo-random bytes"
   homepage "https://github.com/sorairolake/randgen"
-  url "https://github.com/sorairolake/randgen/archive/refs/tags/v0.1.5.tar.gz"
-  sha256 "ef59b83374d550e56ebf755c6d07e318d733e44277af51f3a7f3b84d61915a1c"
+  url "https://github.com/sorairolake/randgen/archive/refs/tags/v0.1.6.tar.gz"
+  sha256 "3a7c506a64db2e79080588f360124fae4787c1c415d639d2722162cf1d960237"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sorairolake/randgen.git", branch: "develop"
 
@@ -16,8 +16,8 @@ class Randgen < Formula
   def install
     system "cargo", "install", *std_cargo_args
 
-    out_dir = Dir["target/release/build/randgen-*/out"].first
-    man1.install Dir["#{out_dir}/*.1"]
+    system "asciidoctor", "-b", "manpage", "docs/man/man1/randgen.1.adoc"
+    man1.install "docs/man/man1/randgen.1"
 
     system "#{bin}/randgen --generate-completion bash > randgen.bash"
     system "#{bin}/randgen --generate-completion fish > randgen.fish"
