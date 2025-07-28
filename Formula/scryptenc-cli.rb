@@ -5,8 +5,8 @@
 class ScryptencCli < Formula
   desc "Utility for encrypt and decrypt files"
   homepage "https://sorairolake.github.io/scryptenc-rs/"
-  url "https://github.com/sorairolake/scryptenc-rs/archive/refs/tags/scryptenc-cli-v0.8.0.tar.gz"
-  sha256 "636e9870985894beff16c5a03cf3b5cfa51fa430a03a8999b952099f13c310c1"
+  url "https://github.com/sorairolake/scryptenc-rs/archive/refs/tags/scryptenc-cli-v0.8.1.tar.gz"
+  sha256 "a4b4956a81867ee01cebcbc62f7555c33ee5df9c0934e6198a8d52a73b44be77"
   license "GPL-3.0-or-later"
   head "https://github.com/sorairolake/scryptenc-rs.git", branch: "develop"
 
@@ -19,8 +19,8 @@ class ScryptencCli < Formula
 
     system "cargo", "install", *std_cargo_args(path: "crates/cli")
 
-    out_dir = Dir["target/release/build/scryptenc-cli-*/out"].first
-    man1.install Dir["#{out_dir}/*.1"]
+    system "asciidoctor", "-b", "manpage", "docs/man/man1/*.1.adoc"
+    man1.install Dir["docs/man/man1/*.1"]
 
     system "#{bin}/rscrypt completion bash > rscrypt.bash"
     system "#{bin}/rscrypt completion fish > rscrypt.fish"
