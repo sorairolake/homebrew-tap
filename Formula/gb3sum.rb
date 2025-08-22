@@ -5,8 +5,8 @@
 class Gb3sum < Formula
   desc "Print and check BLAKE3 checksums"
   homepage "https://github.com/sorairolake/gb3sum"
-  url "https://github.com/sorairolake/gb3sum/archive/refs/tags/v0.2.4.tar.gz"
-  sha256 "f3dc68b87b72f5ba4d103cd21b59a22f4f2955bfe5e2ef4c96112b4c704af024"
+  url "https://github.com/sorairolake/gb3sum/archive/refs/tags/v0.2.5.tar.gz"
+  sha256 "4f9087b591467490b79df4c356b811aa1dfb012effc7da443a96e00e0b784d83"
   license "GPL-3.0-or-later"
   head "https://github.com/sorairolake/gb3sum.git", branch: "develop"
 
