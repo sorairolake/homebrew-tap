@@ -9,8 +9,6 @@ on:
   push:
     branches:
       - "master"
-  schedule:
-    - cron: "0 0 * * 0"
 
 jobs:
   test:
@@ -49,3 +47,16 @@ jobs:
       - name: Run the formulae steps
         if: github.event_name == 'pull_request'
         run: brew test-bot --only-formulae
+
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Run formatter in check mode
+        run: npx prettier -c "**.{yaml,yml}"
