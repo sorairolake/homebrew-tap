@@ -23,7 +23,7 @@ jobs:
           - os-alias: ubuntu
             os: ubuntu-24.04
           - os-alias: macos
-            os: macos-14
+            os: macos-15
     steps:
       - name: Setup Homebrew
         id: set-up-homebrew
