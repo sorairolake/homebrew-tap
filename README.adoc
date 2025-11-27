@@ -5,8 +5,8 @@
 = Homebrew Tap
 :project-url: https://github.com/sorairolake/homebrew-tap
 :shields-url: https://img.shields.io
-:ci-badge: {shields-url}/github/actions/workflow/status/sorairolake/homebrew-tap/CI.yaml?branch=master&style=for-the-badge&logo=github&label=CI
-:ci-url: {project-url}/actions?query=branch%3Amaster+workflow%3ACI++
+:ci-badge: {shields-url}/github/actions/workflow/status/sorairolake/homebrew-tap/CI.yaml?branch=main&style=for-the-badge&logo=github&label=CI
+:ci-url: {project-url}/actions?query=branch%3Amain+workflow%3ACI++
 :homebrew-url: https://brew.sh/
 
 image:{ci-badge}[CI,link={ci-url}]
