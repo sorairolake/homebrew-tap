@@ -5,8 +5,8 @@
 class Randgen < Formula
   desc "Generate pseudo-random bytes"
   homepage "https://github.com/sorairolake/randgen"
-  url "https://github.com/sorairolake/randgen/archive/refs/tags/v0.1.6.tar.gz"
-  sha256 "3a7c506a64db2e79080588f360124fae4787c1c415d639d2722162cf1d960237"
+  url "https://github.com/sorairolake/randgen/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "b53db0da6cd2f2e7c045003d99947440751eb1d4482f34b228bb5cb2f413f801"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sorairolake/randgen.git", branch: "develop"
 
